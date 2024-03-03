@@ -1,7 +1,7 @@
 package chap1;
 import java.util.Scanner;
 
-public class Backtry2 {
+public class Backtry2 { //42로 나눳을때 나머지 계산
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
