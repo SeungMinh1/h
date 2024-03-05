@@ -19,15 +19,24 @@ public class Backtry3 {
 		for(int k=0; k<m; k++) {
 			int i = sc.nextInt();
 			int j = sc.nextInt();
-			for(int h=i; h<=j; h++) {
-				int box = 0; //저장할 공간
-				
-				box = basket[h];
-				basket[h] = basket[j];
+			
+			while(i<j) {
+				int box = 0;
+				box = basket[i];
+				basket[i] = basket[j];
 				basket[j] = box;
-				--j;
+				++i; --j;
 			}
-		}
+			
+//			for(int h=i; h<=j; h++) {
+//				int box = 0; //저장할 공간
+//				
+//				box = basket[h];
+//				basket[h] = basket[j];
+//				basket[j] = box;
+//				--j;
+			}
+		
 		
 		for(int q=1; q<=n; q++) {
 			System.out.print(basket[q]+" ");
