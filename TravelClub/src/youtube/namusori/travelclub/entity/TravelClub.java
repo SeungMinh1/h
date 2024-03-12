@@ -30,6 +30,7 @@ public class TravelClub {
 	}
 
 	//메서드
+	//setter
 	public void setClubName(String clubName) {  //클럽네임 변경?
 		if(clubName.length() < MINIMUM_NAME_LENGTH) {
 			System.out.println("클럽이름은 3글자보다 길어야됩니다.");
@@ -37,9 +38,19 @@ public class TravelClub {
 		}
 		this.clubName = clubName;	
 	}
+	//getter
 	public String getClubName() {  //클럽네임 변경?
 		return this.clubName;
 	}
+	
+	//setter
+		public void setIntro(String intro) {  //클럽네임 변경?
+			if(intro.length() < MINIMUM_INTRO_LENGTH) {
+				System.out.println("인트로는 10글자보다 길어야됩니다.");
+				return;
+			}
+			this.intro = intro;	
+		}
 	
 	
 	
