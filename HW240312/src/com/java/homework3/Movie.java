@@ -10,6 +10,10 @@ public class Movie extends Culture{
 		this.genre = genre;
 	}
 	//메소드
-	public abstract void getInformation()
+	@Override
+	public void getInformation() {
+		System.out.printf("영화제목 : %s\n감독 : %d\n배우 : %d\n영화총점 : %d\n영화평점 : %s\n"
+				, this.name, this.directorNum, this.actorNum, this.totalscore, this.getGrade());
+	}
 
 }

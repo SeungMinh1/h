@@ -11,6 +11,11 @@ public class Performance extends Culture{
 	}
 	
 	//메소드
-	public abstract void getInformation()
+	@Override
+	public void getInformation() {
+		System.out.printf("공연제목 : %s\n감독 : %d\n배우 : %d\n공연총점 : %d\n공연평점 : %s\n"
+				, this.name, this.directorNum, this.actorNum, this.totalscore, this.getGrade());
+	}
+	
 
 }

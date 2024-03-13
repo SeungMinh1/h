@@ -8,7 +8,9 @@ public class StandardWeightInfo extends Human{
 	}
 	
 	public void getInformation() {
-		System.out.printf("이름 : %s 키 : %d 몸무게 : %d 표준체중 : %.1f\n", name, height, weight,getStandardWeight());
+		super.getInformation();
+		System.out.printf(", 표준체중 : %.1f\n", getStandardWeight());
+		//System.out.printf("이름 : %s 키 : %d 몸무게 : %d 표준체중 : %.1f\n", name, height, weight,getStandardWeight());
 	}
 	public double getStandardWeight() {
 		double standard = (height - 100) * 0.9;
