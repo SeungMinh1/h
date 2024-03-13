@@ -18,7 +18,7 @@ public class EmpDept extends Employee{
 	//오버라이딩
 	@Override
 	public void getInformation() {
-		System.out.printf("이름 : %s  연봉 : %d원 부서 : %s\n",name, money,department);
+		System.out.printf("이름 : %s  연봉 : %d원 부서 : %s\n",this.name, this.money,this.department);
 	}
 	@Override
 	public void print() {

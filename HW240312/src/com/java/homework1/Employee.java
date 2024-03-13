@@ -15,7 +15,7 @@ public class Employee {
 	
 	//메서드
 	public void getInformation() {
-		System.out.printf("이름 : %s  연봉 : %d\n", name, money);
+		System.out.printf("이름 : %s  연봉 : %d\n", this.name,this.money);
 	}
 	public void print() {
 		System.out.println("수퍼클래스"); 

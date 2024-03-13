@@ -1,11 +1,13 @@
 package com.java.homework3;
 
-public class Culture {
+public abstract class Culture {
 	//필드
 	String name;
 	int directorNum;
 	int actorNum;
-	int score;
+	int audience;
+	int totalscore = 0;
+	
 	//생성자
 	Culture(String name, int directorNum, int actorNum){
 		this.name = name;
@@ -14,12 +16,17 @@ public class Culture {
 	}
 	//메소드
 	public void setTotalScore(int score) { //관객수와 총점을 누적
-		
+		audience++;
+		totalscore +=score;
 	}
 	 public String getGrade() { // 평점을 구하는 기능
-		return name;
+		String star = "";
+		for(int i=1; i <= totalscore / audience ; i++) 
+			star +="☆";
+		return star;
 	 }
-	 public abstract void getInformation()
+	 
+	 public abstract void getInformation();
 	
 
 }
