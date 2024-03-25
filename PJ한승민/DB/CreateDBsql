@@ -1,0 +1,8 @@
+CREATE TABLE center_member(
+    id VARCHAR(20) PRIMARY KEY,
+    pwd VARCHAR(20) NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    gender VARCHAR(10),
+    birthdate DATE NOT NULL,
+    address VARCHAR(100)
+)
