@@ -92,7 +92,7 @@ public class CmemManagement {
 		if(member == null) {
 			System.out.println("없는 정보입니다.");
 		}else {
-			System.out.println(member);
+			System.out.println(member);   ////////////현재는 해당아이디의 모든정보 출력 => 향후 해당 정보만 출력예정  ex) id ***의 비밀번호는 : ~~
 			String changeid = inputid();
 			member.setId(changeid);
 			memberDAO.updateMemberid(member);
@@ -129,8 +129,7 @@ public class CmemManagement {
 		
 	}
 	
-	
-	
+
 	private void deleteEmp() {
 		String Id = inputId();
 		memberDAO.deleteMember(Id);
@@ -153,9 +152,7 @@ public class CmemManagement {
 		return menu;
 	}
 	
-	
-	
-	
+
 	
 	private void selectEmpAll() {
 		List<CenterMember> list = memberDAO.selectMemberALL();
