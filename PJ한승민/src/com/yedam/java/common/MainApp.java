@@ -1,11 +1,13 @@
 package com.yedam.java.common;
 
-import com.yedam.java.app.HumanResourceMMng;
+import com.yedam.java.app.LoginControl;
 
 public class MainApp {
 
 	public static void main(String[] args) {
-		new HumanResourceMMng().run();
+		//new HumanResourceMMng().run();
+		
+		new LoginControl().run();
 	}
 
 }

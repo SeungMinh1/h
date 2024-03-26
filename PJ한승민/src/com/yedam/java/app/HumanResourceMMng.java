@@ -12,31 +12,57 @@ Scanner sc = null; //new Scanner(System.in);
 		}
 	
 	public void run() {
-		
+		boolean role = LoginControl.loginManger();
 		while(true) {
-			System.out.println("===========================================================");
-			System.out.println("1.센터멤버   9.종료");
-			System.out.println("===========================================================");
-			int menu = selectMenu();
 			
-			if(menu ==1) {
-				new CmemManagement().run();
-			}else if(menu == 9) {
-				end();
-				break;
+			menuPrint(role);
+			if(role == true) {
+				int menu = selectMenu();
+				if(menu ==1) {
+					new CmemManagement().run();
+				}else if(menu == 2) {
+					new EduManagement().run();
+				}else if(menu == 9) {
+					end();
+					break;
+				}else {
+					showError();
+				}
 			}else {
-				showError();
+				int menu = selectMenu();
+				if(menu ==1) {
+					new EnrolmentMng().run();////////////////////////수강신청 만들어야됨
+				}else if(menu == 9) {
+					end();
+					break;
+				}else {
+					showError();
+				}
 			}
+			
 		}
 	}
-	
+	private void menuPrint(boolean role) {
+		String menu = "";
+		if(role) {
+			menu += "1.회원관리 ";
+			menu += "2.부서관리 ";
+		}else {
+			menu += "1. 수강신청 ";
+		}
+		menu += "9.로그아웃 ";
+		System.out.println("===========================================================");
+		System.out.println(menu);
+		System.out.println("===========================================================");
+		
+	}
 	
 	
 	private void showError() {
 		System.out.println("메뉴에서 선택하세요.");
 	}
 	private void end() {
-		System.out.println("프로그램을 종료합니다.");
+		System.out.println("로그아웃 합니다.");
 	}
 	private int selectMenu() {
 		System.out.print("선택 > ");
