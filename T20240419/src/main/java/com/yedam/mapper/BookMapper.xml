@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yedam.mapper.BookMapper">
+
+	<select id="bookList" resultType="com.yedam.vo.BookVO">
+		select *
+		from tbl_books
+	</select>
+	
+	<insert id="insertBook" parameterType="com.yedam.vo.BookVO">
+		insert into tbl_books(book_code, book_title, author, company, price)
+		values(#{bookCode}, #{bookTitle}, #{author}, #{company},#{price})
+	</insert>
+	
+	<delete id="deleteBook" parameterType="String">
+		delete from tbl_books
+		where book_code = #{bcode}
+	</delete>
+
+</mapper>
